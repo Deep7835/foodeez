@@ -1,0 +1,15 @@
+{
+  "name": "Foodeez — Momos",
+  "short_name": "Foodeez",
+  "description": "Order momos from Foodeez, Noida Sector 121",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF8F3",
+  "theme_color": "#FDBA2E",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

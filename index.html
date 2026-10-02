@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Foodeez — Order Momos</title>
+  <meta name="description" content="Order delicious momos from Foodeez, Noida Sector 121. Cart to Yummy, Always Yummy!" />
+  <meta name="theme-color" content="#FDBA2E" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="img/icon-192.png" />
+  <link rel="apple-touch-icon" href="img/icon-180.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Foodeez" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.png" alt="Foodeez logo" class="brand-logo" />
+      <div>
+        <div class="brand-name">Foodeez</div>
+        <div class="brand-loc" id="locLabel">Noida Sector 121</div>
+      </div>
+    </div>
+    <button class="icon-btn" id="accountBtn" aria-label="Account">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      <span id="accountName">Login</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-hi" id="heroHi">Hey there 👋</p>
+        <h1>Hot momos,<br/>made fresh for you.</h1>
+        <p class="hero-sub">Order in seconds and we'll have it ready.</p>
+      </div>
+      <img src="img/fried.jpg" alt="" class="hero-img" />
+    </section>
+
+    <div class="search">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Search paneer, kurkure, popcorn…" autocomplete="off" />
+    </div>
+
+    <nav class="chips" id="chips" aria-label="Categories"></nav>
+
+    <div id="menu"></div>
+
+    <footer class="foot">
+      <img src="img/logo.png" alt="" width="48" height="48" />
+      <div id="footSocial"></div>
+      <p><strong>Foodeez</strong> · <span id="footAddr"></span></p>
+      <p><a id="footCall" href="#">Call us</a> · 100% Veg · FSSAI registered</p>
+    </footer>
+  </main>
+
+  <!-- Floating cart bar -->
+  <button class="cartbar" id="cartBar" hidden>
+    <span class="cartbar-left"><b id="cartCount">0 items</b><span id="cartTotal">₹0</span></span>
+    <span class="cartbar-right">View cart
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg>
+    </span>
+  </button>
+
+  <!-- Install hint -->
+  <div class="install" id="installBar" hidden>
+    <img src="img/icon-192.png" alt="" />
+    <div class="install-text"><b>Add Foodeez to Home Screen</b><span id="installHow">Order faster next time</span></div>
+    <button class="btn-sm" id="installBtn">Add</button>
+    <button class="install-x" id="installClose" aria-label="Close">×</button>
+  </div>
+
+  <!-- Bottom sheet -->
+  <div class="scrim" id="scrim" hidden></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" hidden>
+    <div class="sheet-grab"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="vendor/qrcode.js"></script>
+  <script src="menu.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
